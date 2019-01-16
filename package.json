@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "release": "echo \"Future version will be:\" ; npm run release:local -- --dry-run | grep \"tagging release\" | cut -d\" \" -f4 | cut -c2- ",
+    "release:local": "standard-version",
+    "release:publish": "npm run release:local && git push --follow-tags"
   },
   "dependencies": {
     "axios": "^0.18.0",
