@@ -1,40 +1,59 @@
 <template>
-  <div id="chonApplication">
-    <md-toolbar>
+  <v-app dark id="app">
+    <v-toolbar class="primary" dense>
+      <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
+        <v-toolbar-title>{{ $t('Guinea pigs') }}</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-items>
+          <v-btn flat to="/"><v-icon>fa-home</v-icon></v-btn>
+          <v-btn flat to="food" @click="isLoading = true"><v-icon>fa-apple-alt</v-icon></v-btn>
+          <v-btn flat to="about"><v-icon>fa-question-circle</v-icon></v-btn>
+        </v-toolbar-items>
+    </v-toolbar>
 
-      <md-avatar class="md-avatar-icon md-large">
-        <img src="static/images/chon.png">
-      </md-avatar>
+    <v-progress-linear :indeterminate="isLoading" height="4" class="ma-0" value="100"/>
 
-      <h1 class="md-title" style="flex: 1"> Le Coin des Chons</h1>
-
-    </md-toolbar>
-
-    <md-tabs>
-      <md-tab id="chon-food" md-label="Nourriture">
-        <p class="md-caption">Il est important que votre cochon d'Inde ait au moins deux repas par jour en variant le plus possible les légumes : minimum 6 légumes différents par jour. Varier les assiettes d'un jour à l'autre et en fonction des légumes de saison. Pour vous repérer, un <strong>cochon d'Inde</strong> adulte pourra consommer environ <strong>150 à 200g de légumes</strong> par jour.</p class="md-caption">
-        <chonFoodTable></chonFoodTable>
-      </md-tab>
-
-      <md-tab id="chon-weight" md-label="Poids">
-        <p>TODO</p>
-        <p>Liste des chons et leurs courbes de poids…</p>
-      </md-tab>
-    </md-tabs>
-
-    <md-toolbar>
-        <p>Made with ♥ by Daniel Coquette, with <a href="https://vuejs.org" target="_blank">Vue.js</a>. &copy; Copyright 2017.</p>
-    </md-toolbar>
-  </div>
+    <div class="brand-img full-height">
+      <v-container xs12 offset-md-1 md10 grid-list-sm>
+        <v-layout>
+          <v-flex class="brand-img full-height">
+            <router-view/>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </div>
+  </v-app>
 </template>
 
 <script>
-import chonFoodTable from './components/chon-food-table.vue'
-
 export default {
-  name: 'chonApplication',
-  components: {
-    chonFoodTable: chonFoodTable
+  data () {
+    return {
+      isLoading: false
+    }
+  },
+  methods: {
+    setLoading (isLoading, timeout) {
+      this.isLoading = isLoading
+      if (timeout) {
+        setTimeout(() => { this.$nextTick(() => { this.isLoading = false }) }, timeout)
+      }
+    }
+  },
+  mounted () {
+    this.$root.setLoading = this.setLoading
   }
 }
 </script>
+
+<style scoped>
+.full-height {
+  height: 100% !important;
+}
+.brand-img {
+  background-image: url(/img/chon.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+</style>

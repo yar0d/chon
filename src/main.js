@@ -1,31 +1,37 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
+import 'vuetify/src/stylus/main.styl'
+
 import Vue from 'vue'
-import App from './App'
+import Vuetify from 'vuetify'
+import App from './App.vue'
+import store from './store'
+// import './registerServiceWorker'
 import router from './router'
+import { i18n } from './locales'
+
+import './styles/main.styl'
+
+Vue.use(Vuetify, {
+  iconfont: 'fa',
+  theme: {
+    primary: '#009543',
+    secondary: '#BBBBBB',
+    accent: '#DC241F',
+    error: '#FF5252',
+    info: '#2196F3',
+    success: '#4CAF50',
+    warning: '#FFC107'
+  },
+  lang: {
+    t: (key, ...params) => i18n.t(key, params)
+  }
+})
 
 Vue.config.productionTip = false
 
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.css'
-Vue.use(VueMaterial)
-// Modify default theme
-Vue.material.registerTheme('default', {
-  primary: { color: 'brown', hue: '500' },
-  accent: { color: 'deep-orange', hue: '900' },
-  warn: { color: 'blue', hue: '100' },
-  background: 'white'
-}, 'toxic', {
-  primary: { color: 'blue', hue: '500' },
-  accent: { color: 'pink', hue: '900' },
-  warn: { color: 'yellow', hue: '100' },
-  background: 'red'
-})
-
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  i18n,
   router,
-  template: '<App/>',
-  components: { App }
-})
+  store,
+  render: h => h(App)
+}).$mount('#app')
