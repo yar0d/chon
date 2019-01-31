@@ -1,4 +1,6 @@
-# chon2
+# Chon application
+
+![cover](./cover.jpg)
 
 ## Project setup
 ```
