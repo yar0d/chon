@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import pkg from '../package.json'
-import foods from '@/data/foods'
+import foods from '@/data/foods1'
 
 Vue.use(Vuex)
 
