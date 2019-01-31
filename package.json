@@ -1,7 +1,9 @@
 {
   "name": "chon2",
   "version": "2.0.0",
-  "private": true,
+  "private": false,
+  "license" : "GPL-3.0",
+  "author": "Daniel Coquette <yar0d>",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",

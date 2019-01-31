@@ -67,7 +67,7 @@ export default {
       foods: [],
       toggle_view: 2,
       pagination: {
-        rowsPerPage: -1,
+        rowsPerPage: 10,
         sortBy: 'name'
       }
     }
