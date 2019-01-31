@@ -11,7 +11,8 @@
     "release": "echo \"Future version will be:\" ; npm run release:local -- --dry-run | grep \"tagging release\" | cut -d\" \" -f4 | cut -c2- ",
     "release:local": "standard-version",
     "release:publish": "npm run release:local && echo \"You can now « git push --follow-tags github » and « git push --follow-tags origin ».\"",
-    "release:publish:all": "npm run release:local && git push --follow-tags github ; git push --follow-tags origin ;"
+    "release:publish:all": "npm run release:local && git push --follow-tags github ; git push --follow-tags origin ;",
+    "release:publish:github": "npm run release:local && git push --follow-tags github"
   },
   "dependencies": {
     "axios": "^0.18.0",
