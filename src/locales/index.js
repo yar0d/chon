@@ -27,12 +27,17 @@ export function loadLanguageAsync (lang) {
   lang = lang || navigator.language
   if (i18n.locale !== lang) {
     if (!LOADED_LANGUAGES.includes(lang)) {
-      return import(/* webpackChunkName: "lang-[request]" */ `@/locales/lang/${lang}`).then(msgs => {
-        console.log(`[loadLanguageAsync] loading @/locales/lang/${lang}`)
-        i18n.setLocaleMessage(lang, msgs.default)
-        LOADED_LANGUAGES.push(lang)
-        return setI18nLanguage(lang)
-      })
+      try {
+        return import(/* webpackChunkName: "lang-[request]" */ `@/locales/lang/${lang}`).then(msgs => {
+          console.log(`[loadLanguageAsync] loading @/locales/lang/${lang}`)
+          i18n.setLocaleMessage(lang, msgs.default)
+          LOADED_LANGUAGES.push(lang)
+          return setI18nLanguage(lang)
+        })
+      } catch (e) {
+        console.error('loadLanguageAsync', e)
+        Promise.reject(e)
+      }
     }
     return Promise.resolve(setI18nLanguage(lang))
   }

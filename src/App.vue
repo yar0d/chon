@@ -3,11 +3,16 @@
     <v-toolbar class="primary" dense>
       <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
         <v-toolbar-title>{{ $t('Guinea pigs') }}</v-toolbar-title>
-        <v-spacer></v-spacer>
+        <v-spacer />
         <v-toolbar-items>
-          <v-btn flat to="/"><v-icon>fa-home</v-icon></v-btn>
-          <v-btn flat to="food" @click="isLoading = true"><v-icon>fa-apple-alt</v-icon></v-btn>
-          <v-btn flat to="about"><v-icon>fa-question-circle</v-icon></v-btn>
+          <v-btn large icon to="/" :class="$route.name === 'home' ? 'accent' : ''"><v-icon large>fa-home</v-icon></v-btn>
+          <v-btn large icon to="food" @click="isLoading = true" :class="$route.name === 'food' ? 'accent' : ''">
+            <v-badge color="primary darken-2" overlap>
+              <span slot="badge" class="tiny-text">{{ this.$store.getters.foods.length }}</span>
+              <v-icon large>fa-apple-alt</v-icon>
+          </v-badge>
+          </v-btn>
+          <v-btn large icon disabled to="graph" @click="isLoading = true" :class="$route.name === 'graph' ? 'accent' : ''"><v-icon large>fa-chart-line</v-icon></v-btn>
         </v-toolbar-items>
     </v-toolbar>
 
@@ -55,5 +60,8 @@ export default {
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.tiny-text {
+  font-size: 8px;
 }
 </style>
