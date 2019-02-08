@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.3.0"></a>
+# [2.3.0](https://mandragore:3000/yar0d/chon/compare/v2.2.0...v2.3.0) (2019-02-08)
+
+
+### Features
+
+* More filtering for search ([bac5a92](https://mandragore:3000/yar0d/chon/commits/bac5a92))
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](https://mandragore:3000/yar0d/chon/compare/v2.1.0...v2.2.0) (2019-01-31)
 
