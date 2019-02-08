@@ -2,286 +2,286 @@
 ** https://fr.wikipedia.org/wiki/Composition_nutritionnelle_des_aliments
 **
 ** type:
-**   L = vegetable
-**   F = fruit
+**   VG = vegetable
+**   FR = fruit
 **   HA = Aromatic herb
-**   V = Greenery
+**   GR = Greenery
 **
 ** quality:
-**   TC = Very advisable
-**   C = Advisable
-**   D = Not recommended
-**   M = With moderation
-**   P = To forbid
-**   T = Toxic !
+**   VA = Very advisable
+**   AD = Advisable
+**   NR = Not recommended
+**   WM = With moderation
+**   TF = To forbid
+**   TX = Toxic !
 **   ? = Not tested
 **
 ** For 100 gr of product :
-** Calories in kcal
-** water in g
-** fibers in g
-** carbohydrates in g
-** protein in g
-** lipids in g
-** vitamins in mg
+**   Calories in kcal
+**   Water in g
+**   Fibers in g
+**   Carbohydrates in g
+**   Protein in g
+**   Lipids in g
+**   Vitamins in mg
 */
 
 const FRUITS = [
   {
     name: 'Apricot',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 10
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Pineapple',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 47.8
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Banana',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 8.7
     },
-    type: 'F',
+    type: 'FR',
     note: 'A section of 2 cm. Avoid in case of obesity.'
   }, {
     name: 'Cranberry',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 13.3
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Cherry',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 10
     },
-    type: 'F',
+    type: 'FR',
     note: 'Very sweet.'
   }, {
     name: 'Clementine',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 48.8
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Quince',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 15
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Date',
-    quality: 'D',
+    quality: 'NR',
     vitamins: {
       C: 1.5
     },
-    type: 'F',
+    type: 'FR',
     note: 'Rich in oxalic acid.'
   }, {
     name: 'Figs',
-    quality: 'P',
+    quality: 'TF',
     vitamins: {
       C: 2
     },
-    type: 'F',
+    type: 'FR',
     note: 'Rich in oxalic acid.'
   }, {
     name: 'Strawberry',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 67
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Raspberry',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 26.2
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Passion fruit',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 30
     },
-    type: 'F',
+    type: 'FR',
     note: 'Avoid in guinea pigs suffering from obesity.'
   }, {
     name: 'Guava',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 228.3
     },
-    type: 'F',
+    type: 'FR',
     note: 'Avoid in guinea pigs suffering from obesity.'
   }, {
     name: 'Currant',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 41
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet.'
   }, {
     name: 'Khaki',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 66
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet.'
   }, {
     name: 'Kiwi',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 92.7
     },
-    type: 'F',
+    type: 'FR',
     note: 'Diuretic. May cause loose stools in some susceptible guinea pigs.'
   }, {
     name: 'Litchi',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 71.5
     },
-    type: 'F',
+    type: 'FR',
     note: 'Avoid in guinea pigs suffering from obesity.'
   }, {
     name: 'Mandarin',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 26.7
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet.'
   }, {
     name: 'Mango',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 36.4
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet.'
   }, {
     name: 'Melon',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 36.7
     },
-    type: 'F',
+    type: 'FR',
     note: 'Avoid in guinea pigs with urinary problems.'
   }, {
     name: 'Green / yellow melon',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 36.7
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet.'
   }, {
     name: 'Blueberries',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 20
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet and acidic.'
   }, {
     name: 'Nectarine',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 5.4
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet.'
   }, {
     name: 'Coconut',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 3.3
     },
-    type: 'F',
+    type: 'FR',
     note: 'Rich in vitamin D.'
   }, {
     name: 'Orange',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 53.2
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Grapefruit',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 42
     },
-    type: 'F',
+    type: 'FR',
     note: ''
   }, {
     name: 'Watermelon',
-    quality: 'D',
+    quality: 'NR',
     vitamins: {
       C: 8.1
     },
-    type: 'F',
+    type: 'FR',
     note: 'Not recommended for all the same guinea pigs in good health. Very disadvised in guinea pigs suffering from urinary problems because too rich in calcium.'
   }, {
     name: 'Perry',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 4.3
     },
-    type: 'F',
+    type: 'FR',
     note: 'May cause bloating in some guinea pigs.'
   }, {
     name: 'Pomelo',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 40.9
     },
-    type: 'F',
+    type: 'FR',
     note: 'Sweet and acidic.'
   }, {
     name: 'Apple',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 4.6
     },
-    type: 'F',
+    type: 'FR',
     note: 'Moderately to avoid obesity. Some guinea pigs are allergic to pectin in the skin. To peel.'
   }, {
     name: 'Prune',
-    quality: 'D',
+    quality: 'NR',
     vitamins: {
       C: 0.6
     },
-    type: 'F',
+    type: 'FR',
     note: 'Risk of diarrhea.'
   }, {
     name: 'Grapes',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 4
     },
-    type: 'F',
+    type: 'FR',
     note: 'To moderate because very rich in sugar and can favor obesity.'
   }
 ]
@@ -289,7 +289,7 @@ const FRUITS = [
 const AROMATIC_HERBS = [
   {
     name: 'Dill',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 21
     },
@@ -297,7 +297,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Angelic',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
@@ -305,7 +305,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Basil',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 18
     },
@@ -313,7 +313,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Chervil',
-    quality: 'D',
+    quality: 'NR',
     vitamins: {
       C: 50
     },
@@ -321,7 +321,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Coriander',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 27
     },
@@ -329,7 +329,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Tarragon',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 50
     },
@@ -337,7 +337,7 @@ const AROMATIC_HERBS = [
     note: 'Rich in oxalic acid.'
   }, {
     name: 'Aromatic fennel',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
@@ -345,7 +345,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Mint',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 31.8
     },
@@ -353,7 +353,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Sorrel',
-    quality: 'P',
+    quality: 'TF',
     vitamins: {
       C: 48
     },
@@ -362,7 +362,7 @@ const AROMATIC_HERBS = [
   }, {
     name: 'Parsley (flat, curly)',
     type: 'HA',
-    quality: 'C',
+    quality: 'AD',
     note: 'Do not give to a breastfeeding female: Cut the milk up. Very rich in vitamin C.',
     calories: 28,
     water: 83,
@@ -375,7 +375,7 @@ const AROMATIC_HERBS = [
     }
   }, {
     name: 'Savory',
-    quality: 'P',
+    quality: 'TF',
     vitamins: {
       C: 0
     },
@@ -383,7 +383,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Sage',
-    quality: 'P',
+    quality: 'TF',
     vitamins: {
       C: 0
     },
@@ -391,7 +391,7 @@ const AROMATIC_HERBS = [
     note: ''
   }, {
     name: 'Thyme',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 0
     },
@@ -403,72 +403,72 @@ const AROMATIC_HERBS = [
 const GREENERY = [
   {
     name: 'Strawberry leaves',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: ''
   }, {
     name: 'Raspberry leaves',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: 'Be careful to remove thorns that can injure the walls of the oral cavity.'
   }, {
     name: 'Mulberry leaves',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: 'Be careful to remove thorns that can injure the walls of the oral cavity.'
   }, {
     name: 'Hazel leaves',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: '2 or 3 leaves per ration.'
   }, {
     name: 'Willow leaves',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: ''
   }, {
     name: 'Fresh grass',
-    quality: 'TC',
+    quality: 'VA',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: ''
   }, {
     name: 'Fresh alfalfa',
-    quality: 'D',
+    quality: 'NR',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: 'Too rich in calcium.'
   }, {
     name: 'Nettle',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: 'The ortie is rich in making, in calcium, in potassium, in magnesium, even in vitamins A and C. To make it dry for the purpose of stinging proprieties. Diurettique, Antidiarrheic.'
   }, {
     name: 'Dandelion',
-    type: 'V',
-    quality: 'C',
+    type: 'GR',
+    quality: 'AD',
     note: 'Leaves and flowers are edible.',
     calories: 40,
     water: 85.5,
@@ -481,11 +481,11 @@ const GREENERY = [
     }
   }, {
     name: 'Clover',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 0
     },
-    type: 'V',
+    type: 'GR',
     note: 'May cause excessive bloating.'
   }
 ]
@@ -493,8 +493,8 @@ const GREENERY = [
 const VEGETABLES = [
   {
     name: 'Garlic',
-    type: 'L',
-    quality: 'T',
+    type: 'VG',
+    quality: 'TX',
     note: '',
     calories: 135,
     water: 64,
@@ -507,7 +507,7 @@ const VEGETABLES = [
     }
   }, {
     name: 'Artichoke',
-    type: 'L',
+    type: 'VG',
     quality: '?',
     note: '',
     calories: 40,
@@ -521,8 +521,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Asparagus',
-    type: 'L',
-    quality: 'D',
+    type: 'VG',
+    quality: 'NR',
     note: '',
     calories: 25,
     water: 92,
@@ -535,8 +535,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Eggplant',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: '',
     calories: 18,
     water: 92.2,
@@ -549,16 +549,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Batavia',
-    quality: 'M',
-    type: 'L',
+    quality: 'WM',
+    type: 'VG',
     note: 'Laxative. May be given daily in moderate quantity (2 to 3 leaves). In very moderate quantities the very first times for guinea pigs not used.',
     vitamins: {
       C: 0
     }
   }, {
     name: 'Bette',
-    type: 'L',
-    quality: 'D',
+    type: 'VG',
+    quality: 'NR',
     note: 'Very rich in oxalic acid (600mg for 1g) May promote urolithiasis problems if consumed in excess, even for healthy guinea pigs. Not recommended for guinea pigs with urinary problems.',
     calories: 21,
     water: 92.4,
@@ -571,8 +571,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Beetroot',
-    type: 'L',
-    quality: 'D',
+    type: 'VG',
+    quality: 'NR',
     note: 'Rich in sugar, little nutritional value, promotes obesity. To proscribe in guinea pigs having urinary problems.',
     calories: 40,
     water: 86.2,
@@ -585,16 +585,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Borage',
-    quality: 'C',
-    type: 'L',
+    quality: 'AD',
+    type: 'VG',
     note: '',
     vitamins: {
       C: 35
     }
   }, {
     name: 'Brocoli',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: 'May cause excessive bloating.',
     calories: 25,
     water: 90.6,
@@ -607,8 +607,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Carrot',
-    type: 'L',
-    quality: 'D',
+    type: 'VG',
+    quality: 'NR',
     note: 'Contains oxalic acid not recommended in cases of obesity (sugars).',
     calories: 33,
     water: 89,
@@ -621,8 +621,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Celery',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: 'Diuretic. May cause loose stools in some susceptible guinea pigs.',
     calories: 18,
     water: 88,
@@ -635,8 +635,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Cultivated mushroom',
-    type: 'L',
-    quality: 'D',
+    type: 'VG',
+    quality: 'NR',
     note: '',
     calories: 15,
     water: 91.8,
@@ -649,32 +649,32 @@ const VEGETABLES = [
     }
   }, {
     name: 'Chicory',
-    quality: 'C',
-    type: 'L',
+    quality: 'AD',
+    type: 'VG',
     note: '',
     vitamins: {
       C: 24
     }
   }, {
     name: 'Chinese cabbage',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 3.2
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Brussels sprouts',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 85
     },
-    type: 'L',
+    type: 'VG',
     note: 'May cause excessive bloating.'
   }, {
     name: 'Cauliflower (without leaf)',
-    type: 'L',
-    quality: 'M',
+    type: 'VG',
+    quality: 'WM',
     note: 'May cause excessive bloating.',
     calories: 24,
     water: 91,
@@ -687,16 +687,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Kale',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 120
     },
-    type: 'L',
+    type: 'VG',
     note: 'May cause excessive bloating.'
   }, {
     name: 'Green cabbage',
-    type: 'L',
-    quality: 'M',
+    type: 'VG',
+    quality: 'WM',
     note: 'May cause excessive bloating.',
     calories: 22,
     water: 88,
@@ -709,16 +709,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Chive',
-    quality: 'T',
+    quality: 'TX',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Cucumber',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: 'Rich in water. Recommended for guinea pigs who drink little or have urinary problems.',
     calories: 10,
     water: 96.3,
@@ -731,7 +731,7 @@ const VEGETABLES = [
     }
   }, {
     name: 'Fresh pickle',
-    type: 'L',
+    type: 'VG',
     quality: '?',
     note: 'Be careful to remove stinging hairs.',
     calories: 13,
@@ -745,16 +745,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Squash',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 9.6
     },
-    type: 'L',
+    type: 'VG',
     note: 'Slightly sweet.'
   }, {
     name: 'Zucchini',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: '',
     calories: 15,
     water: 94.5,
@@ -767,8 +767,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Cress',
-    type: 'L',
-    quality: 'M',
+    type: 'VG',
+    quality: 'WM',
     note: '',
     calories: 17,
     water: 93.1,
@@ -781,8 +781,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Endive (chicory, chicory)',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: '2 or 3 leaves, rich in water.',
     calories: 15,
     water: 94,
@@ -795,8 +795,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Spinach',
-    type: 'L',
-    quality: 'D',
+    type: 'VG',
+    quality: 'NR',
     note: 'May cause loose stools in some susceptible guinea pigs. Very rich in oxalic acid. Risk of promoting urolithiasis problems if they are consumed in excess, even for healthy guinea pigs. Not recommended in guinea pigs with urinary problems.',
     calories: 18,
     water: 91.7,
@@ -809,48 +809,48 @@ const VEGETABLES = [
     }
   }, {
     name: 'Beet tops',
-    quality: 'P',
+    quality: 'TF',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Very rich in oxalic acid.'
   }, {
     name: 'Carrot tops',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Can be given daily.'
   }, {
     name: 'Fennel leaves',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Can be given daily.'
   }, {
     name: 'Turnip Fanes',
-    quality: 'P',
+    quality: 'TF',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Very rich in calcium.'
   }, {
     name: 'Radish tops',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Diuretic. May cause loose stools in some susceptible guinea pigs.'
   }, {
     name: 'Fennel',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: '',
     calories: 25,
     water: 88,
@@ -863,7 +863,7 @@ const VEGETABLES = [
     }
   }, {
     name: 'Bean',
-    type: 'L',
+    type: 'VG',
     quality: '?',
     note: '',
     calories: 64,
@@ -877,23 +877,23 @@ const VEGETABLES = [
     }
   }, {
     name: 'Oak Leaf',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Laxative. May be given daily in moderate quantity (2 to 3 leaves). In very moderate quantities the very first times for guinea pigs not used.'
   }, {
     name: 'Curly',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Laxative. May be given daily in moderate quantity (2 to 3 leaves). In very moderate quantities the very first times for guinea pigs not used.'
   }, {
     name: 'Ginger',
-    type: 'L',
+    type: 'VG',
     quality: '?',
     note: '',
     calories: 60,
@@ -907,8 +907,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Green beans',
-    type: 'L',
-    quality: 'M',
+    type: 'VG',
+    quality: 'WM',
     note: 'Choose extra expenses. Do not give too much at a time. Rich in oxalic acid: not recommended for guinea pigs with urinary problems.',
     calories: 30,
     water: 90,
@@ -921,16 +921,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Flat coconut beans',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Lettuce',
-    type: 'L',
-    quality: 'P',
+    type: 'VG',
+    quality: 'TF',
     note: 'Too much nitrate!',
     calories: 13,
     water: 94.5,
@@ -943,15 +943,15 @@ const VEGETABLES = [
     }
   }, {
     name: 'lamb\'s lettuce',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 38.2
     },
-    type: 'L',
+    type: 'VG',
     note: 'Diuretic. May cause loose stools in some susceptible guinea pigs.'
   }, {
     name: 'Corn',
-    type: 'L',
+    type: 'VG',
     quality: '?',
     note: '',
     calories: 96,
@@ -965,16 +965,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Mesclun',
-    quality: 'D',
+    quality: 'NR',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Turnip',
-    type: 'L',
-    quality: 'M',
+    type: 'VG',
+    quality: 'WM',
     note: 'In moderate quantities because can cause bloating.',
     calories: 18,
     water: 93,
@@ -987,8 +987,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Onion',
-    type: 'L',
-    quality: 'T',
+    type: 'VG',
+    quality: 'TX',
     note: '',
     calories: 34,
     water: 89,
@@ -1001,16 +1001,16 @@ const VEGETABLES = [
     }
   }, {
     name: 'Parsnip',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 17
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Pea',
-    type: 'L',
-    quality: 'M',
+    type: 'VG',
+    quality: 'WM',
     note: '',
     calories: 80,
     water: 74,
@@ -1023,8 +1023,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Leek',
-    type: 'L',
-    quality: 'T',
+    type: 'VG',
+    quality: 'TX',
     note: '',
     calories: 27,
     water: 90.5,
@@ -1037,8 +1037,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Pepper (red, yellow, green)',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: 'Can be given daily. Red pepper contains much more Vitamin A C than yellow or green.',
     calories: 21,
     water: 91,
@@ -1051,8 +1051,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Potato',
-    type: 'L',
-    quality: 'T',
+    type: 'VG',
+    quality: 'TX',
     note: '',
     calories: 85,
     water: 77,
@@ -1065,8 +1065,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Pumpkin',
-    type: 'L',
-    quality: 'M',
+    type: 'VG',
+    quality: 'WM',
     note: 'Slightly sweet.',
     calories: 20,
     water: 92.8,
@@ -1079,8 +1079,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Purslane',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: '',
     calories: 18,
     water: 93.2,
@@ -1093,8 +1093,8 @@ const VEGETABLES = [
     }
   }, {
     name: 'Radish',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: 'We can also give the tops. Can create bloating if given too much.',
     calories: 15,
     water: 94.5,
@@ -1107,56 +1107,56 @@ const VEGETABLES = [
     }
   }, {
     name: 'Black radish',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 6.4
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Horseradish',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 97.3
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Rhubarb',
-    quality: 'P',
+    quality: 'TF',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Strong acidity.'
   }, {
     name: 'Romaine lettuce',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 5
     },
-    type: 'L',
+    type: 'VG',
     note: 'Laxative. May be given daily in moderate quantity (2 to 3 leaves). In very moderate quantities the very first times for guinea pigs not used.'
   }, {
     name: 'Rocket salad',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: ''
   }, {
     name: 'Rutabaga',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 25
     },
-    type: 'L',
+    type: 'VG',
     note: 'Give in small quantity.'
   }, {
     name: 'Salsify and scorzonera',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: '',
     calories: 30,
     water: 79,
@@ -1169,32 +1169,32 @@ const VEGETABLES = [
     }
   }, {
     name: 'Escarole',
-    quality: 'M',
+    quality: 'WM',
     vitamins: {
       C: 0
     },
-    type: 'L',
+    type: 'VG',
     note: 'Laxative. May be given daily in moderate quantity (2 to 3 leaves). In very moderate quantities the very first times for guinea pigs not used.'
   }, {
     name: 'Tomato',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 13.7
     },
-    type: 'L',
+    type: 'VG',
     note: 'Rich in water, but can cause diarrhea.'
   }, {
     name: 'Cherry tomato',
-    quality: 'C',
+    quality: 'AD',
     vitamins: {
       C: 18.4
     },
-    type: 'L',
+    type: 'VG',
     note: 'Rich in water, but can cause diarrhea.'
   }, {
     name: 'Jerusalem artichoke',
-    type: 'L',
-    quality: 'C',
+    type: 'VG',
+    quality: 'AD',
     note: 'Rich in water and low in calcium and phosphorus.',
     calories: 31,
     water: 79,
