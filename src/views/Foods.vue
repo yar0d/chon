@@ -4,28 +4,23 @@
       <v-flex xs12>
         <v-toolbar dense flat>
             <chon-search-input @search="onSearch" clearable class="title" :placeholder="$t('Search')" />
-            <!-- <v-chip outline small label v-show="foods.length !== count" class="primary--text">{{ $t('{num}/{count}.', { num: foods.length, count }) }}</v-chip> -->
+            <v-chip outline small label v-show="foods.length !== count" class="primary--text">{{ $t('Filter: {num} on {count}.', { num: foods.length, count }) }}</v-chip>
             <v-spacer />
             <v-toolbar-items>
-              <v-btn @click="toggle_view = 1" icon :class="toggle_view === 1 ? 'accent' : ''">
-                <v-icon small>fas fa-align-justify</v-icon>
-              </v-btn>
-
-              <v-btn @click="toggle_view = 2" icon :class="toggle_view === 2 ? 'accent' : ''">
-                <v-icon small>fas fa-th-large</v-icon>
-              </v-btn>
-
-              <v-btn @click="toggle_filter = !toggle_filter" icon>
-                <v-icon small>{{ toggle_filter ? 'fas fa-chevron-up' : 'fas fa-chevron-down' }}</v-icon>
+              <v-btn @click="toggle_filter = !toggle_filter" icon :class="filter_types.length || filter_qualities.length ? 'accent' : ''">
+                <v-icon small >fas fa-filter</v-icon>
               </v-btn>
             </v-toolbar-items>
         </v-toolbar>
         <v-card v-show="toggle_filter" class="pa-2">
           <v-layout row wrap>
-            <v-flex xs12 md6>
+            <v-flex xs12 sm2>
+              <v-btn small @click="resetFilters">{{ $t('Reset filters') }}</v-btn>
+            </v-flex>
+            <v-flex xs12 sm5>
               <v-select :label="$t('Types')" v-model="filter_types" :items="FOOD_TYPES" multiple chips deletable-chips small-chips avatar/>
             </v-flex>
-            <v-flex xs12 md6>
+            <v-flex xs12 sm5>
               <v-select :label="$t('Qualities')" v-model="filter_qualities" :items="FOOD_QUALITIES" multiple chips deletable-chips small-chips />
             </v-flex>
           </v-layout>
@@ -119,6 +114,11 @@ export default {
           return item.name.toLowerCase().indexOf(value.toLowerCase()) >= 0
         })
       })
+    },
+    resetFilters () {
+      this.filter_types = []
+      this.filter_qualities = []
+      this.toggle_filter = false
     }
   },
   mounted () {
