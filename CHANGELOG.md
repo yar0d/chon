@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.4.0"></a>
+# [2.4.0](https://github.com/yar0d/chon/compare/v2.3.0...v2.4.0) (2019-02-21)
+
+
+### Features
+
+* Sipmlified food item vue with expansion panel. ([9745849](https://github.com/yar0d/chon/commit/9745849))
+
+
+
 <a name="2.3.0"></a>
 # [2.3.0](https://mandragore:3000/yar0d/chon/compare/v2.2.0...v2.3.0) (2019-02-08)
 
