@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { loadLanguageAsync } from '@/locales'
 import Home from '@/views/Home.vue'
-import Food from '@/views/Food.vue'
+import Foods from '@/views/Foods.vue'
 
 Vue.use(Router)
 
@@ -21,7 +21,7 @@ const router = new Router({
     {
       path: '/food',
       name: 'food',
-      component: Food
+      component: Foods
     }
     // {
     //   path: '/about',
