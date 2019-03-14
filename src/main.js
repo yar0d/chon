@@ -3,13 +3,15 @@ import 'vuetify/src/stylus/main.styl'
 
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import FrappeChart from 'vue2-frappe'
 import App from './App.vue'
 import store from './store'
-// import './registerServiceWorker'
 import router from './router'
 import { i18n } from './locales'
 
 import './styles/main.styl'
+
+Vue.config.productionTip = false
 
 Vue.use(Vuetify, {
   iconfont: 'fa',
@@ -28,7 +30,7 @@ Vue.use(Vuetify, {
   }
 })
 
-Vue.config.productionTip = false
+Vue.use(FrappeChart)
 
 new Vue({
   i18n,

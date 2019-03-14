@@ -12,7 +12,7 @@
               <v-icon large>fa-apple-alt</v-icon>
           </v-badge>
           </v-btn>
-          <v-btn large icon disabled to="graph" @click="isLoading = true" :class="$route.name === 'graph' ? 'accent' : ''"><v-icon large>fa-chart-line</v-icon></v-btn>
+          <v-btn large icon to="charts" @click="isLoading = true" :class="$route.name === 'charts' ? 'accent' : ''"><v-icon large>fa-chart-line</v-icon></v-btn>
         </v-toolbar-items>
     </v-toolbar>
 
