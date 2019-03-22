@@ -13,7 +13,7 @@
         <v-list dense>
           <v-list-tile>
             <v-list-tile-content>{{ $t('Quality') }}</v-list-tile-content>
-            <v-list-tile-action><span><v-icon small :color="FOOD_CONSTS.getQualityColor(food.quality)">{{ FOOD_CONSTS.getQualityIcon(food.quality) }}</v-icon> {{ FOOD_CONSTS.getQualityLabel(food.quality) }}</span></v-list-tile-action>
+            <v-list-tile-action><span><v-icon small :color="FOOD_CONSTS.getQualityColor(food.quality)">{{ FOOD_CONSTS.getQualityIcon(food.quality) }}</v-icon> {{ $t(FOOD_CONSTS.getQualityLabel(food.quality)) }}</span></v-list-tile-action>
           </v-list-tile>
           <v-list-tile v-show="food.vitamins">
             <v-list-tile-content class="important--text subheading accent--text">{{ $t('C vitamin')}}</v-list-tile-content>
@@ -48,7 +48,7 @@
           </v-list-tile>
           <v-list-tile>
             <v-list-tile-content>{{ $t('Type') }}</v-list-tile-content>
-            <v-list-tile-action>{{ FOOD_CONSTS.getTypeLabel(food.type) }}</v-list-tile-action>
+            <v-list-tile-action>{{ $t(FOOD_CONSTS.getTypeLabel(food.type)) }}</v-list-tile-action>
           </v-list-tile>
         </v-list>
 
